@@ -1,7 +1,7 @@
 [![Taking Submissions | Open for Hiring](https://img.shields.io/badge/Taking_Submissions-Open_for_hiring-brightgreen.svg)]()
 [![Location | New York City](https://img.shields.io/badge/Location-NYC_Flatiron-blue.svg)]()
 
-Welcome applicant. Thanks for your interest in New York Life Labs! Rather than submitting your resume into another blackhole, we're offering you a chance to show your best skills in the context of what were tangibly looking for. If you're a good fit for the company, this project will give you a chance to stand out
+Welcome applicant 👋👋 Thanks for your interest in New York Life Labs! Rather than submitting your resume into another blackhole, we're offering you a chance to show your best skills in the context of what were tangibly looking for. If you're a good fit for the company, this project will give you a chance to stand out
 
 # Intro
 
