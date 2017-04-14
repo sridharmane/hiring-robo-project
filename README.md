@@ -47,14 +47,14 @@ Below are the "tickets" to help you complete all aspects of the project in the m
 
 ### B1. Understand the Data models.
 
-Checkout the [data models](#), you will be the working very closely with this data.
+Checkout the [data models](https://github.com/NYLLABS/hiring-robo-project/wiki/Data-Models), you will be the working very closely with this data.
 
 The trickiest part is that the reviews for each robo-assistant is not embedded in the document. Think about ways to fetch the reviews when you need them for a corresponding robo-assistant.
 
 
 ### B2. Understand the API
 
-[Robo-assist API](#) is the premiere API for accessing the robo-assistant database. It will be helpful to verify that you can make calls to all the routes.
+[Robo-assist API](https://github.com/NYLLABS/hiring-robo-project/wiki/Robo-assist-API) is the premiere API for accessing the robo-assistant database. It will be helpful to verify that you can make calls to all the routes.
 
 + Use [Postman](https://www.getpostman.com/), cURL, or [httpie](https://httpie.org/) for testing the routes.
 + Follow the documentation to:
