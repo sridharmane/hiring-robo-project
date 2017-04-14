@@ -124,7 +124,7 @@ Upon receiving the project, NYLLabs will do the following:
 + Run `ng build`
 + Open the `dist/` in Chrome and Firefox (recent or very-close-to-recent stable versions)
 + Search for a robo-assistant.
-+ Click on a robo-asstant.
++ Click on a robo-assistant.
 + Review code implementation in the following files.
     + `/src/app/detail/*`
     + `/src/app/search/*`
