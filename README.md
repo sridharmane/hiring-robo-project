@@ -1,3 +1,5 @@
+[![Hiring | Open](https://img.shields.io/badge/Hiring-Open-brightgreen.svg)]()
+
 # Intro
 
 Robo Inc., an innovative tech giant in Silicon Alley (Yes, "Alley"--they're based in NYC of course!) has developed fully functional robotic assistants, know as **robo-assistants** (Think _iRobot_ without the curfew or revolutions). They are working on a website for customers to use. They can search for robo-assistants and view details on them. Originally, Robo Inc tried using one of their very own robo-assistants to build out the webapp, but it turns out the [Angular framework](https://www.angular.io) is too advanced for even the most advanced robots. So they need you to take up the challenge!
