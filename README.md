@@ -109,11 +109,13 @@ In `src/app/detail/detail.component.ts`, complete the options object in the deco
 
 + Delete the `node_modules` directory, make sure any additional dependencies you've added is properly saved to package.json.
 
-+ Create a zip of the entire finished project and email it to hiring@nyllabs.tech.
++ Create a zip of the entire finished project and email it to hiring@nyllabs.tech. NOTE: If using gmail, you will have to upload the zip with Google Drive.
+
++ **Please attach your resume in PDF format as well**.
 
 + If you've added or modified extra files, be sure to also mention this in the email of your submission.
 
-> NOTE: This email is monitored and any attachments other than the assigned project will be blocked and investigated.
+> NOTE: This email is monitored and any attachments other than the assigned project and resume will be blocked and investigated.
 
 ## Assessment
 
