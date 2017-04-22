@@ -1,3 +1,18 @@
-<p>
-  search works!
-</p>
+<md-toolbar color="primary">Robo Assistant Search
+</md-toolbar>
+<md-input-container>
+  <input mdInput type="text" [(ngModel)]="searchText" placeholder="Robo Name"/>
+  </md-input-container>
+  <button md-button (click)="sendSearch()"><md-icon>search</md-icon>Search</button>
+<div class="search-result-container">
+  <md-card class="robo-assistant" *ngFor="let bot of searchResults" (click)="showDetail(bot.robo_id)">
+    <md-card-header>
+      <img md-card-avatar [src]="bot.avatar" />
+      <md-card-title>
+      {{bot.name}}
+    </md-card-title>
+    <md-card-subtitle>{{bot.model}}</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>{{bot.price | currency:'USD':true:'1.0-0'}}</md-card-content>
+  </md-card>
+</div>

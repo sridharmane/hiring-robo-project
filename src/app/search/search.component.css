@@ -1,0 +1,10 @@
+.search-result-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+md-card.robo-assistant{
+    margin: 8px;
+    width: 100px;
+    height:80px;
+}
