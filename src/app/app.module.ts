@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
+import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { RoboAssistantService } from './roboAssistant.service';
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
-    DetailComponent
+    DetailComponent,
+    RatingStarsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+.rating-stars-container {
+  display: flex;
+  height: 24px;
+  align-items: center;
+}
+
+.rating-star {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
