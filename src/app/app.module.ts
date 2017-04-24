@@ -18,7 +18,7 @@ import { RoboAssistantService } from './roboAssistant.service';
 const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'detail', component: SearchComponent },
-  { path: 'detail/:roboId', component: DetailComponent },
+  { path: 'detail/:robo_id', component: DetailComponent },
   { path: '', redirectTo: '/search', pathMatch: 'full' }
 ];
 
