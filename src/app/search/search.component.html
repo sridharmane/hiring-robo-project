@@ -1,18 +1,34 @@
-<md-toolbar color="primary">Robo Assistant Search
-</md-toolbar>
-<md-input-container>
-  <input mdInput type="text" [(ngModel)]="searchText" placeholder="Robo Name"/>
-  </md-input-container>
-  <button md-button (click)="sendSearch()"><md-icon>search</md-icon>Search</button>
+<div class="search-bar-container">
+  <md-toolbar>
+    <md-input-container class="search-input">
+      <md-icon md-prefix class="search-icon">search</md-icon>
+      <input mdInput type="text" class="search-input" [(ngModel)]="searchText" placeholder="Search Name" (keyup.enter)="sendSearch()"
+      />
+      <span md-suffix>
+    <button md-icon-button (click)="sendSearch()"><md-icon md-prefix class="search-icon">chevron_right</md-icon></button>
+  </span>
+    </md-input-container>
+  </md-toolbar>
+</div>
+<div class="search-status-container">
+  <md-spinner class="search-status-spinner" mode="indeterminate" *ngIf="isSearching"></md-spinner>
+  <p class="search-status-total" mat-line *ngIf="(searchResults | async)?.length > 0">{{(searchResults | async)?.length}} robos found</p>
+  <p class="search-status-not-found" mat-line *ngIf="(searchResults | async)?.length === 0">No robos found!</p>
+</div>
 <div class="search-result-container">
-  <md-card class="robo-assistant" *ngFor="let bot of searchResults" (click)="showDetail(bot.robo_id)">
+  <!--<p>Filter by Model:
+    <md-checkbox *ngFor="let model of roboModels"></md-checkbox>
+  </p>-->
+  <!--<section class="filter-contianer">
+    <md-checkbox class="filter-option" [(ngModel)]="filterMo">Checked</md-checkbox>
+  </section>-->
+  <md-card class="robo-assistant" *ngFor="let bot of (searchResults | async)" (click)="showDetail(bot.robo_id)">
     <md-card-header>
       <img md-card-avatar [src]="bot.avatar" />
-      <md-card-title>
-      {{bot.name}}
-    </md-card-title>
-    <md-card-subtitle>{{bot.model}}</md-card-subtitle>
+      <md-card-title class="robo-name">{{bot.name}}</md-card-title>
+      <md-card-subtitle class="robo-model">{{bot.model}}</md-card-subtitle>
+      <md-card-subtitle class="robo-price">{{bot.price | currency:'USD':true:'1.0-0'}}</md-card-subtitle>
     </md-card-header>
-    <md-card-content>{{bot.price | currency:'USD':true:'1.0-0'}}</md-card-content>
+    <!--<md-card-content></md-card-content>-->
   </md-card>
 </div>

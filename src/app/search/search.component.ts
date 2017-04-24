@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { RoboAssistantService } from "../roboAssistant.service";
+import { Router, ActivatedRoute } from '@angular/router';
+import { RoboAssistantService } from '../roboAssistant.service';
 import { IRoboAssistant } from '../types';
 
 @Component({
@@ -9,20 +9,46 @@ import { IRoboAssistant } from '../types';
   styleUrls: ['./search.component.css']
 })
 
-export class SearchComponent {
+export class SearchComponent implements OnInit {
 
-  searchResults: IRoboAssistant[]; // You can update the search results array as data is fetched.
+  searchResults: Promise<IRoboAssistant[]>; // You can update the search results array as data is fetched.
 
   searchText: string = ''; // You can two-way bind this to the textbox input for searches
+  isSearching = false;
+  roboModels = {};
 
-  constructor(private roboAssistantService: RoboAssistantService, private router: Router) { }
+  constructor(
+    private roboAssistantService: RoboAssistantService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+    this.roboModels = this.roboAssistantService.models;
+    this.route.queryParams.subscribe(params => {
+      if (params.searchText) {
+        this.searchText = params.searchText;
+        this.sendSearch();
+      }
+    });
+
+  }
 
 
   sendSearch() {
     // bind this to the click event in your "search" button. Fetch
     const searchText = this.searchText.trim();
     if (searchText.length > 0) {
-      this.searchResults = this.roboAssistantService.searchRoboAssistantsByName(this.searchText);
+      this.isSearching = true;
+      this.searchResults = this.roboAssistantService.searchByName(this.searchText);
+      this.searchResults.then(() => {
+        this.isSearching = false;
+      });
+      this.router.navigate(['./search'], {
+        queryParams: {
+          searchText: this.searchText
+        }
+      });
     }
   }
 

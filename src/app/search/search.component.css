@@ -1,10 +1,60 @@
+.search-bar-container {
+  width: 100%;
+  display: flex;
+  /*align-content: center;*/
+}
+
+.search-input {
+  margin: 0 auto;
+  padding-top: 8px;
+  line-height: 40px;
+}
+
+.search-input.mat-input-element {
+  padding: 0 8px;
+}
+
+md-icon.search-icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.search-status-container{
+  width: 100%;
+  height: 48px;
+}
+.search-status-spinner{
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+}
+.search-status-total{
+  /*margin: 0 auto;*/
+  text-align: center;
+}
+.search-status-not-found{
+  text-align: center;
+}
 .search-result-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
 }
-md-card.robo-assistant{
-    margin: 8px;
-    width: 100px;
-    height:80px;
+
+md-card.robo-assistant {
+  margin: 8px;
+  width: 120px;
+  text-overflow: ellipsis;
+  /*height: 80px;*/
+}
+md-card.robo-assistant:hover{
+  cursor: default;
+}
+md-card-title.robo-name{
+  font-size: 16px;
+}
+.robo-model{}
+.robo-price{
+  margin-bottom: 0;
 }

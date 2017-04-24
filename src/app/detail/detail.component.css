@@ -1,0 +1,47 @@
+md-card.robo-detail {
+  min-width: 300px;
+  max-width: 80%;
+  margin: 8px auto;
+  margin-bottom: 8px;
+}
+
+md-card .robo-name,
+md-card .robo-model,
+md-card .robo-price,
+md-card .robo-average-rating  {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+md-card .robo-name {
+  font-size: 24px;
+}
+
+md-card .robo-model {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.65;
+}
+
+md-card .robo-image, md-card .robo-average-rating {
+  display: block;
+  margin: 0 auto;
+}
+
+md-card .robo-price {
+  font-size: 16px;
+  opacity: 0.8;
+}
+md-card .robo-average-rating{
+  display: block;
+  width: 80px;
+}
+.review-text {
+  margin-top: 0;
+}
+
+.spinner{
+  margin: 0 auto;
+  width: 24px;
+}

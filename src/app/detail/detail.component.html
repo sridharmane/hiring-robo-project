@@ -1,16 +1,20 @@
-<p>Detail works</p>
-<md-card>
-    <img md-card-md-image [src]="(bot | async)?.avatar"/>
-    <md-card-title>{{(bot | async)?.name}}</md-card-title>
-    <md-card-subtitle>{{(bot | async)?.model}}</md-card-subtitle>
-    <md-card-content>{{(bot | async)?.price | currency:'USD':true:'1.0-0'}}</md-card-content>
-    <md-card-subtitle>Reviews</md-card-subtitle>
-    <md-card-content >
-        <md-list *ngIf="(reviews | async)">
-            <md-list-item *ngFor="let review of (reviews| async)">
-                <p md-line>{{review.rating}}</p>
-                <p md-line>{{review.review}}</p>
-            </md-list-item>
-        </md-list>
+<md-card class="robo-detail">
+    <img md-card-md-image class="robo-image" [src]="(bot | async)?.avatar"/>
+    <h2 class="robo-name">{{(bot | async)?.name}}</h2>
+    <h4 class="robo-model">{{(bot | async)?.model}}</h4>
+    <h4 class="robo-price">{{(bot | async)?.price | currency:'USD':true:'1.0-0'}}</h4>
+    <app-rating-stars *ngIf="averageRating > 0" class="robo-average-rating" [rating]="averageRating"></app-rating-stars>
+    <md-card-content *ngIf="!(reviews | async)">
+        <md-spinner mode="indeterminate" class="spinner"></md-spinner>
+    </md-card-content>
+    <md-card-content *ngIf="(reviews | async)">
+        <h4>Reviews</h4>
+        <p *ngIf="(reviews | async)?.length === 0">No reviews yet.</p>
+        <div *ngIf="(reviews | async)">
+            <div *ngFor="let review of (reviews| async)">
+                <app-rating-stars [rating]="review.rating"></app-rating-stars>
+                <p class="review-text">{{review.review}}</p>
+            </div>
+        </div>
     </md-card-content>
 </md-card>
